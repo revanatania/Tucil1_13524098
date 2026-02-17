@@ -19,7 +19,7 @@ def boardParser(path: str | Path) -> Tuple[int, List[List[str]]]:
     n = len(lines)
     if any(len(row) != n for row in lines):
         wrong = [(i, len(lines[i])) for i in range(n) if len(lines[i]) != n]
-        raise ValueError(f"Invalid board, grid must be square (NXN). Wrong rows: {wrong}")
+        raise ValueError(f"Invalid board, grid must be square.")
     
     area = [list(row) for row in lines]
     validateBoard(n, area)
@@ -63,7 +63,6 @@ def isValidMove(cols: Sequence[int], n: int, region: List[List[str]]) -> bool:
             return False
         scols.add(c)
 
-    # regions must be unique
     sareas: Set[str] = set()
     for r in range(n):
         c = cols[r]

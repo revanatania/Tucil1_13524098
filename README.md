@@ -50,7 +50,7 @@ Biasanya sudah tersedia otomatis bersama Python.
 sudo apt install python3-tk
 ```
 
-## 🛠️ Cara Kompilasi
+## Cara Kompilasi
 
 Program ini tidak memerlukan proses kompilasi, karena menggunakan Python (interpreted language).
 
@@ -66,7 +66,7 @@ atau
 py --version
 ```
 
-## ▶️ Cara Menjalankan Program
+## Cara Menjalankan Program
 
 ### Windows
 
@@ -118,9 +118,9 @@ ACCB
 - Setiap baris harus memiliki panjang yang sama.
 - Jumlah huruf unik harus sama dengan ukuran papan (n).
 
-## 👤 Author
+## Author
 
 - Nama : Reva Natania Sitohang
 - NIM : 13524098
-- Mata Kuliah : Strategi Algoritma
-- Tugas : Tucil 1 – Brute Force Queens LinkedIn
+- Tucil 1 – Penyelesaian Permainan Queens Linkedin Strategi Algoritma IF2211
+
