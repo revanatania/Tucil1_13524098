@@ -52,25 +52,48 @@ def build_color_map(area: List[List[str]]) -> Dict[str, str]:
 
 def choose_update(mode: str, n: int) -> int:
     n = max(0, int(n))
-
+    
     if mode == "fact":
-        if n <= 10:
+        if n <= 8:
             return 1_000
-        if n <= 14:
+        if n <= 10:
             return 5_000
-        if n <= 18:
+        if n <= 12:
             return 20_000
-        if n <= 22:
+        if n <= 14:
             return 50_000
-        return 100_000
+        if n <= 16:
+            return 100_000
+        if n <= 18:
+            return 250_000
+        if n <= 20:
+            return 500_000
+        if n <= 22:
+            return 1_000_000
+        if n <= 24:
+            return 2_000_000
+        return 5_000_000
 
+    if n <= 6:
+        return 1_000
     if n <= 7:
         return 10_000
-    if n <= 10:
+    if n <= 8:
+        return 100_000
+    if n <= 9:
         return 1_000_000
+    if n <= 10:
+        return 5_000_000
+    if n <= 12:
+        return 25_000_000
     if n <= 14:
-        return 500_000
-    return 1_000_000
+        return 100_000_000
+    if n <= 18:
+        return 500_000_000
+    if n <= 22:
+        return 1_000_000_000
+    return 2_000_000_000 
+
 
 
 def save_solution_txt(path: str, res: Dict[str, Any]) -> None:
