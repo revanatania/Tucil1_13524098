@@ -1,0 +1,12 @@
+LinkedIn Queens Solver Result
+Mode       : pow
+Time (ms)  : 86820.55039999977
+Iterations : 36532921
+
+AAA#AAA
+B#BBBBB
+BCBB#DD
+CCBBDE#
+#CBBDDD
+FCBBD#D
+CC#BDDD

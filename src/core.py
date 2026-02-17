@@ -9,7 +9,7 @@ def boardParser(path: str | Path) -> Tuple[int, List[List[str]]]:
     
     lines: List[str] = []
     for ln in p.read_text(encoding="utf-8").splitlines():
-        ln = ln.strip()
+        ln = ln.strip().upper()
         if ln:
             lines.append(ln)
 
@@ -55,8 +55,6 @@ def diffAreas(n: int, area: List[List[str]]) -> Set[str]:
 def isValidMove(cols: Sequence[int], n: int, region: List[List[str]]) -> bool:
     if len(cols) != n:
             return False
-
-    # columns must be within range and unique
     scols = set()
     for c in cols:
         if c < 0 or c >= n:
@@ -74,7 +72,6 @@ def isValidMove(cols: Sequence[int], n: int, region: List[List[str]]) -> bool:
             return False
         sareas.add(rid)
 
-    # adjacency restriction: no queens touching (8-neighborhood)
     for r1 in range(n):
         c1 = cols[r1]
         for r2 in range(r1 + 1, n):
@@ -83,21 +80,6 @@ def isValidMove(cols: Sequence[int], n: int, region: List[List[str]]) -> bool:
                 return False
 
     return True
-
-def renderSolution(cols: Sequence[int], n: int) -> List[str]:
-    """
-    Returns N strings of length N:
-      '#' = queen
-      '.' = empty
-    """
-    out: List[str] = []
-    for r in range(n):
-        q = cols[r]
-        row = ["." for _ in range(n)]
-        row[q] = "#"
-        out.append("".join(row))
-    return out
-
 
 def saveSolution(path: str | Path, lines: Sequence[str]) -> None:
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")

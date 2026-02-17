@@ -1,0 +1,11 @@
+LinkedIn Queens Solver Result
+Mode       : fact
+Time (ms)  : 7.96220000484027
+Iterations : 369
+
+AAA#AA
+#BBCAC
+BD#CAC
+BBBC#C
+E#EEEE
+EEEEE#
