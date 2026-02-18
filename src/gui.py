@@ -324,6 +324,8 @@ def run_gui() -> None:
         if len(found_set) != n:
             raise ValueError(f"Invalid board, must contain exactly {n} different color area.")
 
+
+
         # area gabole pisah
         pos_by_letter: Dict[str, List[Tuple[int, int]]] = {ch: [] for ch in found_set}
         for r in range(n):

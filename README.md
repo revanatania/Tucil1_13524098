@@ -54,43 +54,85 @@ sudo apt install python3-tk
 
 Program ini tidak memerlukan proses kompilasi, karena menggunakan Python (interpreted language).
 
-Pastikan Python sudah terinstal:
+### Windows
 
-```
-python --version
-```
+1. Pastikan Python sudah terinstal dan berada di PATH:
+   ```
+   py --version
+   ```
+   atau
+   ```
+   python --version
+   ```
 
-atau
+2. Verifikasi library yang diperlukan tersedia:
+   ```
+   py -m pip list
+   ```
+   (tkinter sudah tersedia secara default pada instalasi Python Windows)
 
-```
-py --version
-```
+### Linux
+
+1. Pastikan Python sudah terinstal:
+   ```
+   python3 --version
+   ```
+
+2. Instal tkinter jika belum tersedia:
+   ```
+   sudo apt update
+   sudo apt install python3-tk
+   ```
+
+3. Verifikasi library:
+   ```
+   python3 -m pip list
+   ```
 
 ## Cara Menjalankan Program
 
 ### Windows
 
-Masuk ke folder utama project, lalu jalankan:
+1. Buka Command Prompt atau PowerShell
+2. Navigasi ke folder utama project:
+   ```
+   cd D:\Tucil1_13524098
+   ```
+3. Jalankan program dengan salah satu cara:
+   ```
+   py src/main.py
+   ```
+   atau
+   ```
+   python src/main.py
+   ```
+4. GUI akan terbuka secara otomatis
 
-```
-python src/main.py
-```
-
-atau
-
-```
-py src/main.py
-```
+**Catatan:** Jika mendapatkan error PATH, gunakan path absolut ke Python atau gunakan `python` dengan `.py` association.
 
 ### Linux
 
-Masuk ke folder utama project, lalu jalankan:
+1. Buka Terminal
+2. Navigasi ke folder utama project:
+   ```
+   cd ~/path/to/Tucil1_13524098
+   ```
+3. Jalankan program:
+   ```
+   python3 src/main.py
+   ```
+4. GUI akan terbuka secara otomatis
 
-```
-python3 src/main.py
-```
+**Catatan:** Pastikan direktori project memiliki izin akses yang tepat dengan:
+   ```
+   chmod +x src/main.py
+   ```
 
-Program akan menampilkan GUI.
+### Troubleshooting
+
+- **Error: Module tkinter not found (Linux):** Install dengan `sudo apt install python3-tk`
+- **Error: command not found:** Gunakan `python3` pada Linux, `py` atau `python` pada Windows
+- **Error: GUI tidak muncul:** Pastikan X11/display server berjalan pada sistem remote
 
 ## Cara Menggunakan Program
 

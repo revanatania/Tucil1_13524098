@@ -40,7 +40,7 @@ def validateBoard(n: int, area: List[List[str]]) -> None:
             
     dif = diffAreas(n, area)
     if len(dif) != n:
-        raise ValueError(f"Invalid board, must contain exactly {n} different letters. Found: {dif}")
+        raise ValueError(f"Invalid board, must contain exactly {n} different letters.")
     
 
 def diffAreas(n: int, area: List[List[str]]) -> Set[str]:
